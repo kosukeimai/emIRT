@@ -1,0 +1,8 @@
+useDynLib(emIRT)
+import(pscl)
+import(Rcpp)
+#import(RcppArmadillo)
+
+#exportPattern("^[[:alpha:]]+")
+export(binIRT, ordIRT, dynIRT, hierIRT)
+export(convertRC, makePriors, getStarts)
