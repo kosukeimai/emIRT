@@ -34,7 +34,9 @@
     \item{\code{beta$sigma}}{  A ( D+1 x D+1 ) prior covariance matrix for \eqn{\alpha_j} and \eqn{\beta_j}.}
      }
   }
-  \item{.D}{ integer, indicates number of dimensions to estimate.}
+  \item{.D}{ integer, indicates number of dimensions to estimate. Only a
+    1 dimension is currently supported. If a higher dimensional model is
+  requested, \code{binIRT} exits with an error.}
   \item{.control}{list, specifying some control functions for estimation.  Options include the following:
     \itemize{
     \item{\code{threads}}{  integer, indicating number of cores to use. Default is to use a single core, but more can be

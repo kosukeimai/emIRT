@@ -23,6 +23,9 @@ binIRT <- function(.rc,
     cat(divider)
     cat("binIRT: Binary IRT via Expectation Maximization\n\n")
 
+    ## Currently Force 1 Dimension
+    if (.D != 1) stop("Only 1 dimension is currently supported. Use '.D = 1.'")
+
     ## Main Call to Computation
     ret <- .Call('FastEst_estimate',
                  PACKAGE = 'emIRT',
