@@ -12,6 +12,7 @@ The current release of the R package is available on
 [CRAN](https://cran.r-project.org/web/packages/emIRT/).
 
 The github versions of the R package are available with
+
     library("devtools")
     install_github("kosukeimai/emIRT")
     install_github("kosukeimai/emIRT", ref ="development")
