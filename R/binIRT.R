@@ -1,9 +1,11 @@
 binIRT <- function(.rc,
-                    .starts = NULL,
-                    .priors = NULL,
-                    .D = 1L,
-                    .control = NULL
-                    ) {
+                   .starts = NULL,
+                   .priors = NULL,
+                   .D = 1L,
+                   .control = NULL,
+                   .anchor_subject = NULL,
+                   .anchor_outcomes = FALSE
+                   ) {
     cl <- match.call()
 
     divider <- c(paste(rep("=", 20), sep = "", collapse = ""), "\n")
@@ -64,6 +66,99 @@ binIRT <- function(.rc,
     ret$means$beta <- cbind(ret$means$a, ret$means$b)
     ret$means$b <- NULL
     ret$means$a <- NULL
+
+    .anchor_outcomes <- .anchor_outcomes[1]
+    ## Rotation for 1 Dimension
+    if (.D > 1L) {
+        if (!is.null(.anchor_subject) | .anchor_outcomes) {
+            cat(paste("\n\t",
+                      "Polarity anchors: specified for more than 1 dimensions.",
+                      "\n\t\tNot supported -- ignoring anchors.",
+                      "\n",
+                      sep = ""
+                      )
+                )
+        }
+    }
+
+    if (!is.null(.anchor_subject) & .anchor_outcomes) {
+        cat(paste("\n\t",
+                  "Polarity anchors: both manual and outcome-based anchors specified.",
+                  "\n\t\tAnchoring will use manually selected subjects.",
+                  "\n",
+                  sep = ""
+                  )
+            )
+
+        idx <- .anchor_subject[1]
+        thisx <- ret$means$x[idx, 1]
+        cMean <- mean(ret$means$x[, 1])
+
+        if (thisx < cMean) {
+            ret$means$x[, 1] <- ret$means$x[, 1] * -1
+            ret$means$beta[, 2] <- ret$means$beta[, 2] * -1
+        }
+
+    }
+
+    if (!is.null(.anchor_subject) & !.anchor_outcomes) {
+        cat(paste("\n\t",
+                  "Polarity anchors: manually selected subjects specified.",
+                  "\n",
+                  sep = ""
+                  )
+            )
+
+        idx <- .anchor_subject[1]
+        thisx <- ret$means$x[idx, 1]
+        cMean <- mean(ret$means$x[, 1])
+
+        if (thisx < cMean) {
+            ret$means$x[, 1] <- ret$means$x[, 1] * -1
+            ret$means$beta[, 2] <- ret$means$beta[, 2] * -1
+        }
+
+    }
+
+    if (is.null(.anchor_subject) & .anchor_outcomes) {
+        cat(paste("\n\t",
+                  "Polarity anchors: outcomes-based anchors specified.",
+                  "\n",
+                  sep = ""
+                  )
+            )
+
+        nSucc <- apply(.rc$votes, 2, function (X) sum(X == 1))
+        nFail <- apply(.rc$votes, 2, function (X) sum(X == -1))
+                                        # number of successes and failures for
+                                        # each item e.g., number of votes for,
+                                        # number of correct responses
+
+        propFail <- (nFail) / (nFail + nSucc)
+        cDiff <- propFail
+                                        # model-free "difficulty"
+
+        getScore <- function (X) {
+            idxP <- which(X == 1)
+            idxN <- which(X == -1)
+            sum(propFail[idxP]) / sum(propFail[c(idxP, idxN)])
+        }
+
+        vScores <- apply(.rc$votes, 1, getScore)
+        cMax <- max(vScores)
+        idx <- which(vScores == cMax)[1]
+
+        thisx <- ret$means$x[idx, 1]
+        cMean <- mean(ret$means$x[, 1])
+
+        if (thisx < cMean) {
+            ret$means$x[, 1] <- ret$means$x[, 1] * -1
+            ret$means$beta[, 2] <- ret$means$beta[, 2] * -1
+        }
+
+
+    }
+
 
     ## Labelling of Output
     dlx <- paste("d", 1:.D, sep = "")
