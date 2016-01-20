@@ -134,9 +134,14 @@ binIRT <- function(.rc,
                                         # each item e.g., number of votes for,
                                         # number of correct responses
 
+        ## print(nSucc)
+        ## print(nFail)
+
         propFail <- (nFail) / (nFail + nSucc)
         cDiff <- propFail
                                         # model-free "difficulty"
+
+        ## print(propFail)
 
         getScore <- function (X) {
             idxP <- which(X == 1)
@@ -145,8 +150,15 @@ binIRT <- function(.rc,
         }
 
         vScores <- apply(.rc$votes, 1, getScore)
-        cMax <- max(vScores)
+
+        names(vScores) <- NULL
+        ## print(vScores)
+
+        cMax <- max(vScores, na.rm = TRUE)
+        ## print(cMax)
         idx <- which(vScores == cMax)[1]
+
+        ## print(idx)
 
         thisx <- ret$means$x[idx, 1]
         cMean <- mean(ret$means$x[, 1])
