@@ -9,7 +9,7 @@ Description: Various Expectation-Maximization (EM) algorithms are implemented fo
 				(IRT) models. The current implementation includes IRT models for binary and ordinal
 				responses, along with dynamic and hierarchical IRT models with binary responses. The
 				latter two models are derived and implemented using variational EM.
-License: GPL (>= 2)
+License: GPL (>= 3)
 Depends: R (>= 2.10), pscl (>= 1.0.0), Rcpp (>= 0.10.6)
 LinkingTo: Rcpp, RcppArmadillo
 NeedsCompilation: yes
