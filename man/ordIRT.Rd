@@ -61,7 +61,7 @@
     \itemize{
     \item{\code{x}}{  A (N x 1) matrix of point estimates for the respondent ideal points \eqn{x_t}.}
     \item{\code{beta}}{  A (J x 1) matrix of point estimates for the reparameterized item discrimination parameter \eqn{\beta^*}.}
-    \item{\code{tau}}{  A (J x 1) matrix of point estimates for the bill cutpoint \eqn{\tau_j}.}
+    \item{\code{tau}}{  A (J x 1) matrix of point estimates for the bill cutpoint \eqn{\alpha^*}.}
     \item{\code{Delta_sq}}{  A (J x 1) matrix of point estimates for the squared bill cutpoint difference \eqn{\tau_j^2}.}
     \item{\code{Delta}}{  A (J x 1) matrix of point estimates for the bill cutpoint difference \eqn{\tau_j}.}
     }                 
