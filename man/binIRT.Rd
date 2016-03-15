@@ -31,8 +31,8 @@
     \itemize{
     \item{\code{x$mu}}{  A (D x D) prior means matrix for respondent ideal points \eqn{x_i}.}
     \item{\code{x$sigma}}{  A (D x D) prior covariance matrix for respondent ideal points \eqn{x_i}.}
-    \item{\code{beta$mu}}{  A ( D+1 x 1) prior means matrix for \eqn{\alpha_j} and \eqn{\beta_j}.}
-    \item{\code{beta$sigma}}{  A ( D+1 x D+1 ) prior covariance matrix for \eqn{\alpha_j} and \eqn{\beta_j}.}
+    \item{\code{beta$mu}}{  A (D+1 x 1) prior means matrix for \eqn{\alpha_j} and \eqn{\beta_j}.}
+    \item{\code{beta$sigma}}{  A (D+1 x D+1) prior covariance matrix for \eqn{\alpha_j} and \eqn{\beta_j}.}
      }
   }
   \item{.D}{ integer, indicates number of dimensions to estimate. Only a
@@ -43,22 +43,24 @@
     \item{\code{threads}}{  integer, indicating number of cores to use. Default is to use a single core, but more can be
     	supported if more speed is desired.}
     \item{\code{verbose}}{  boolean, indicating whether output during estimation should be verbose or not.  Set FALSE by default.}
-    \item{\code{thresh}}{  numeric. Algorithm will run until all parameters correlate at 1 - thresh across
-    	consecutive iterations. Set at 1e-6 by default.}
+    \item{\code{thresh}}{  numeric. Algorithm will run until all
+      parameters have a correlation greater than (1 - threshold) across
+      consecutive iterations. Set at 1e-6 by default.}
     \item{\code{maxit}}{  integer. Sets the maximum number of iterations the algorithm can run. Set at 500 by default.}
     \item{\code{checkfreq}}{  integer. Sets frequency of verbose output by number of iterations. Set at 50 by default.}
     }
   }
   \item{.anchor_subject}{ integer, the index of the subect to be used in
   anchoring the orientation/polarity of the underlying latent
-  dimensions.
+  dimensions. Defaults to \code{NULL} and no anchoring is done.
 }
 \item{.anchor_outcomes}{ logical, should an outcomes-based metric be
   used to anchor the orientation of the underlying space. The
   outcomes-based anchoring uses a model-free/non-parametric
   approximation to quantify each item's difficulty and each subject's
   ability. The post-processing then rotates the model-dependent results
-  to match the model-free polarity.}
+  to match the model-free polarity. Defaults to \code{FALSE} and no
+  anchoring is done.}
 }
 
 \value{
