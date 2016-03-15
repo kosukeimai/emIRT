@@ -1,0 +1,13 @@
+
+0.0.5    * initial posting onto CRAN
+		 * Includes binIRT(), ordIRT(), dynIRT(), and hierIRT() models
+		 
+0.0.6	* Changes for final APSR conditional accept
+	    * Added networkIRT() and poisIRT() functions with documentation
+		* Added Pablo's data with example code to Twitter model, along with documentation
+		* Added German manifesto data with example code to Wordfish model, along with documentation
+		* binIRT() in 2D is now disabled: This is something longer-term for Jonathan to take another look at
+		* Error in ordIRT() documentation noted by Jason Wu fixed
+		* Bootstrap function boot_emIRT() added
+		* Changelog added
+
