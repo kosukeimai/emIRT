@@ -18,4 +18,19 @@ bool checkConv(const arma::mat &oldx,
                const int convtype
                ) ;
 
+bool checkConv_endorseIRT (const arma::mat &oldalpha,
+                           const arma::mat &curalpha,
+                           const arma::mat &oldbeta,
+                           const arma::mat &curbeta,
+                           const arma::mat &oldtheta,
+                           const arma::mat &curtheta,
+                           const arma::mat &oldw,
+                           const arma::mat &curw,
+                           const arma::mat &oldgamma,
+                           const arma::mat &curgamma,
+                           const double thresh,
+                           const int convtype
+                           ) ;
+
+
 #endif

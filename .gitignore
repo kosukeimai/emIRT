@@ -13,8 +13,8 @@ vignettes/*.html
 vignettes/*.pdf
 
 # compiled objects
-./src/*.so
-./src/*.so
+*.so
+*.o
 
 # R pkg check output
 ./emIRT.Rcheck

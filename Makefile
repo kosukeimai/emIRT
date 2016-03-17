@@ -21,7 +21,7 @@ remove :
 
 clean :
 	rm -f emIRT*.tar.gz
-	rm -fr pkg.Rcheck
+	rm -fr emIRT.Rcheck
 	rm -f ./src/*.o
 	rm -f ./src/*.so
 	rm -f ./src/*.rds

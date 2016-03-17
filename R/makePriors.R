@@ -33,3 +33,32 @@ makePriors <- function(.N = 20,
                      )
     return(out)
 }
+
+
+makePriorsE <- function(.N = 20,
+                        .J = 100
+                        ) {
+    out <- vector(mode = "list")
+
+    out$theta <- list(mu = matrix(rep(0, 1), nrow = 1),
+                      sigma = 1^2 * diag(1)
+                      )
+
+    out$w <- list(mu = matrix(rep(0, 1), nrow = 1),
+                  sigma = 1^2 * diag(1)
+                  )
+
+    out$alpha <- list(mu = matrix(rep(0, 1), nrow = 1),
+                      sigma = 5^2 * diag(1)
+                      )
+
+    out$beta <- list(mu = matrix(rep(0, 1), nrow = 1),
+                     sigma = 5^2 * diag(1)
+                     )
+
+    out$gamma <- list(mu = matrix(rep(1, 1), nrow = 1),
+                      sigma = 1^2 * diag(1)
+                      )
+
+    return(out)
+}

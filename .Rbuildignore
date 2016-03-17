@@ -2,4 +2,5 @@ README.md
 .git
 .gitignore
 Makefile
-^\.travis\.yml$
+./test
+.travis.yml
