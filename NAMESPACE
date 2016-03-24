@@ -8,3 +8,6 @@ export(binIRT, ordIRT, dynIRT, hierIRT)
 export(convertRC, makePriors, getStarts)
 export(networkIRT, poisIRT)
 export(boot_emIRT)
+
+importFrom("stats", "pnorm", "qnorm", "rnorm", "runif", "sd")
+importFrom("utils", "flush.console")
