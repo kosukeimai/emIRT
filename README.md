@@ -5,7 +5,7 @@ response theory (IRT) models. The current implementation includes IRT models for
 binary and ordinal responses, along with dynamic and hierarchical IRT models
 with binary responses. Variational algorithms for scaling network and text data
 are also included.  The details about the methods implemented in this package are 
-described in Imai, Lo, and Olmsted. ``[Fast Estimation of Ideal Points with Massive Data.]{http://imai.princeton.edu/research/fastideal.html}'' American Political Science Review, Forthcoming.
+described in Imai, Lo, and Olmsted. ``[Fast Estimation of Ideal Points with Massive Data.](http://imai.princeton.edu/research/fastideal.html)'' American Political Science Review, Forthcoming.
 
 The current release of the R package is available on
 [CRAN](https://cran.r-project.org/web/packages/emIRT/).
