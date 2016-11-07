@@ -2,6 +2,7 @@
 
 language: r
 cache: packages
+sudo: required
 
 notifications:
   email:
