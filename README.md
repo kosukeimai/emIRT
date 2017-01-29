@@ -1,4 +1,4 @@
-# emIRT: EM Algorithms for Estimating Item Response Theory Models [![Build Status](https://travis-ci.org/kosukeimai/emIRT.svg?branch=master)](https://travis-ci.org/kosukeimai/emIRT)  [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/pkgdown)](https://cran.r-project.org/package=pkgdown)
+# emIRT: EM Algorithms for Estimating Item Response Theory Models [![Build Status](https://travis-ci.org/kosukeimai/emIRT.svg?branch=master)](https://travis-ci.org/kosukeimai/emIRT)  [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/emIRT)](https://cran.r-project.org/package=emIRT)
 
 Various Expectation-Maximization (EM) algorithms are implemented for item
 response theory (IRT) models. The current implementation includes IRT models for
