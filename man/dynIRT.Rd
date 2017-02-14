@@ -15,12 +15,7 @@
 }
 
 \arguments{
-  \item{.data}{ matrix of numeric values containing the data to be scaled.  Respondents are
-    assumed to be on rows, and items assumed to be on columns, so the matrix is assumed to be
-    of dimension (N x J).  For each item, only 3 ordered category responses are accepted, and the
-    only allowable responses are `1', `2', and `3', with `0' as a missing data record. If data
-    of more than 3 categories are to be rescaled, they should be collapsed into 3 categories and
-    recoded accordingly before proceeding.
+  \item{.data}{ a list with the following items.
       \itemize{
       \item{\code{rc}}{  A (N x J) matrix of observed votes. `1' and `-1' are the yea and nay codes, while `0' is
       	a missing data code.}
@@ -116,7 +111,7 @@
 \author{ 
 Kosuke Imai \email{kimai@princeton.edu}
 
-James Lo \email{jameslo@princeton.edu}
+James Lo \email{lojames@usc.edu}
 
 Jonathan Olmsted \email{jpolmsted@gmail.com}
 }
