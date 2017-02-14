@@ -9,3 +9,9 @@
 		* Error in ordIRT() documentation noted by Jason Wu fixed
 		* Bootstrap function boot_emIRT() added
 		* Changelog added
+
+0.0.7	* Maintainer changed from jameslo@princeton.edu to lojames@usc.edu
+		* OpenMP in Windows now works properly with fixed Makevars.win
+		* Per Max Goplerud, we discovered the poisIRT() fixed effect terms were flipped.  Output is simply reversed in estimate_poisIRT() at end to keep consistency with paper, see comment
+
+0.0.8	*"Cut and Paste" documentation issues fixed in dynIRT() and hierIRT()
