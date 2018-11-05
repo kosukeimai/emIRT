@@ -3,7 +3,7 @@ Type: Package
 Title: EM Algorithms for Estimating Item Response Theory Models
 Version: 0.0.6
 Date: 2016-03-14
-Author: Kosuke Imai <kimai@princeton.edu>, James Lo <jameslo@princeton.edu>, Jonathan Olmsted <jpolmsted@gmail.com>
+Author: Kosuke Imai <imai@harvard.edu>, James Lo <jameslo@princeton.edu>, Jonathan Olmsted <jpolmsted@gmail.com>
 Maintainer: James Lo <jameslo@princeton.edu>
 Description: Various Expectation-Maximization (EM) algorithms are implemented for item response theory
 				(IRT) models. The current implementation includes IRT models for binary and ordinal
