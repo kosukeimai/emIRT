@@ -29,7 +29,12 @@ arma::mat getEx(const arma::mat &Eystar,
 
         arma::mat tmp = inv_sympd(sigma) + Ebt * Eb ;
         //  tmp.print("tmp") ;
-        arma::mat A = inv_sympd(tmp) ;
+
+// Before v0.0.9
+//        arma::mat A = inv_sympd(tmp) ;
+
+		// Following Rothenberg, Jo, Seo's testing, v. 0.0.11
+        A = inv_sympd(tmp);
         // A.print("getEx Aem") ;
     }
 
