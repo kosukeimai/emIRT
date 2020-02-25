@@ -1,10 +1,10 @@
 Package: emIRT
 Type: Package
 Title: EM Algorithms for Estimating Item Response Theory Models
-Version: 0.0.6
-Date: 2016-03-14
-Author: Kosuke Imai <imai@harvard.edu>, James Lo <jameslo@princeton.edu>, Jonathan Olmsted <jpolmsted@gmail.com>
-Maintainer: James Lo <jameslo@princeton.edu>
+Version: 0.0.11
+Date: 2020-02-01
+Author: Kosuke Imai <kimai@princeton.edu>, James Lo <lojames@usc.edu>, Jonathan Olmsted <jpolmsted@gmail.com>
+Maintainer: James Lo <lojames@usc.edu>
 Description: Various Expectation-Maximization (EM) algorithms are implemented for item response theory
 				(IRT) models. The current implementation includes IRT models for binary and ordinal
 				responses, along with dynamic and hierarchical IRT models with binary responses. The
@@ -14,3 +14,6 @@ License: GPL (>= 3)
 Depends: R (>= 2.10), pscl (>= 1.0.0), Rcpp (>= 0.10.6)
 LinkingTo: Rcpp, RcppArmadillo
 NeedsCompilation: yes
+Packaged: 2020-02-04 00:43:08 UTC; jameslo
+Repository: CRAN
+Date/Publication: 2019-12-13 20:40:02 UTC
