@@ -48,6 +48,7 @@
       consecutive iterations. Set at 1e-6 by default.}
     \item{\code{maxit}}{  integer. Sets the maximum number of iterations the algorithm can run. Set at 500 by default.}
     \item{\code{checkfreq}}{  integer. Sets frequency of verbose output by number of iterations. Set at 50 by default.}
+    \item{\code{asEM}}{  boolean. Sets EM or variational EM algorithm. Set is TRUE.}
     }
   }
   \item{.anchor_subject}{ integer, the index of the subect to be used in
@@ -102,7 +103,7 @@
 \author{
 Kosuke Imai \email{kimai@princeton.edu}
 
-James Lo \email{jameslo@princeton.edu}
+James Lo \email{lojames@usc.edu}
 
 Jonathan Olmsted \email{jpolmsted@gmail.com}
 }
