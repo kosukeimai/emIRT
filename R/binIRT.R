@@ -11,6 +11,7 @@ binIRT <- function(.rc,
     divider <- c(paste(rep("=", 20), sep = "", collapse = ""), "\n")
 
     ## Default Control
+    ## asEM default changed to TRUE in v0.0.11
     default <- list(threads = 1L,
                     verbose = FALSE,
                     maxit = 500,
@@ -19,7 +20,7 @@ binIRT <- function(.rc,
                     checkfreq = 50,
                     withLB = FALSE,
                     withProbs = FALSE,
-                    asEM = FALSE
+                    asEM = TRUE
                     )
     cat("\n")
     cat(divider)
