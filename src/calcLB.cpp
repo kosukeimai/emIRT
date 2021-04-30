@@ -83,7 +83,7 @@ double calcLB (const arma::mat &y,
     // Ideal Points
     double elpx = (0
                    // -std::log(nN) // WRONG
-                   -(nN * nD) * std::log(2 * PI) / 2
+                   -(nN * nD) * std::log(2 * M_PI) / 2
                    -(nN / 2) * std::log(arma::det(xsigma))
                    ) ;
     {
@@ -102,7 +102,7 @@ double calcLB (const arma::mat &y,
     // Bill Parameters
     double elpb2 = (0
                     // -std::log(nJ) // WRONG
-                    -(nJ * (nD + 1)) * std::log(2 * PI) / 2
+                    -(nJ * (nD + 1)) * std::log(2 * M_PI) / 2
                     -(nJ / 2) * std::log(arma::det(betasigma))
                     ) ;
     {
@@ -130,7 +130,7 @@ double calcLB (const arma::mat &y,
     // Augmented Likelihood
     double elpystar = (0
                        // -std::log(nN * nJ) // WRONG
-                       -((nN * nJ) / 2) * std::log(2 * PI)
+                       -((nN * nJ) / 2) * std::log(2 * M_PI)
                        ) ;
     {
 #pragma omp parallel for reduction(+:elpystar)
