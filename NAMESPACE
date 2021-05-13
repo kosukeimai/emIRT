@@ -1,4 +1,4 @@
-useDynLib(emIRT)
+useDynLib(emIRT, .registration = TRUE)
 import(pscl)
 import(Rcpp)
 #import(RcppArmadillo)
