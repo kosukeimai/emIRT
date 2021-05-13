@@ -39,7 +39,7 @@ double enttn1(const double mean,
 
     double num = num1 - num2 ;
     double denom = 2 * q3 ;
-    double temp = (.5 * log(2 * PI * exp(1.0)) +
+    double temp = (.5 * log(2 * M_PI * exp(1.0)) +
                    log(sd * q3)
                    ) ;
 
