@@ -1,8 +1,8 @@
 Package: emIRT
 Type: Package
 Title: EM Algorithms for Estimating Item Response Theory Models
-Version: 0.0.11
-Date: 2020-02-01
+Version: 0.0.12
+Date: 2021-05-12
 Author: Kosuke Imai <imai@harvard.edu>, James Lo <lojames@usc.edu>, Jonathan Olmsted <jpolmsted@gmail.com>
 Maintainer: James Lo <lojames@usc.edu>
 Description: Various Expectation-Maximization (EM) algorithms are implemented for item response theory
@@ -12,6 +12,7 @@ Description: Various Expectation-Maximization (EM) algorithms are implemented fo
 				also include variational network and text scaling models.
 License: GPL (>= 3)
 Depends: R (>= 2.10), pscl (>= 1.0.0), Rcpp (>= 0.10.6)
+Suggests: MCMCpack
 LinkingTo: Rcpp, RcppArmadillo
 NeedsCompilation: yes
 Packaged: 2020-02-04 00:43:08 UTC; jameslo
