@@ -135,7 +135,7 @@ double calcLB (const arma::mat &y,
     {
 #pragma omp parallel for reduction(+:elpystar)
         for (int n = 0 ; n < nN ; n++) {
-            for (int j = 0 ; nJ < nJ ; j++) {
+            for (int j = 0 ; j < nJ ; j++) {
                 double low = y(n,j) == 1 ? 0.0 : R_NegInf ;
                 double high = y(n,j) == -1 ? 0.0 : R_PosInf ;
 
