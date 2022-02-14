@@ -125,8 +125,7 @@ Jonathan Olmsted \email{jpolmsted@gmail.com}
 \references{
 
 Variational model is described in Kosuke Imai, James Lo, and Jonathan Olmsted ``Fast Estimation
-of Ideal Points with Massive Data.'' Working Paper.
-Available at \url{http://imai.princeton.edu/research/fastideal.html}.
+of Ideal Points with Massive Data.'' American Political Science Review, Volume 110, Issue 4, November 2016, pp. 631-656. <DOI:10.1017/S000305541600037X>.
 
 }
 
@@ -137,7 +136,7 @@ Available at \url{http://imai.princeton.edu/research/fastideal.html}.
 \examples{
 
 ### Real data example of US Senate 80-110 (not run)
-### Based on voteview.com example of DW-NOMINATE (ftp://voteview.com/dw-nominate.htm)
+### Based on voteview.com example of DW-NOMINATE (\url{https://voteview.com/})
 ### We estimate a hierarchical model without noise and a linear time covariate
 ### This model corresponds very closely to the DW-NOMINATE model
 

@@ -8,7 +8,7 @@
 \description{
 
   This data set contains materials related to the Poole-Rosenthal DW-NOMINATE measure of senator
-  ideology.  The software (and other materials) is available at \url{ftp://voteview.com/dw-nominate.htm},
+  ideology.  The software (and other materials) is available at \url{https://voteview.com/},
   which includes a simpler example of an application to the 80-110 U.S. Senate.  The data set here is
   derived from the data and estimates from that example, but are formatted to be run in \code{hierIRT()}.
   In particular, start values for estimation are identical to those provided by the example.
