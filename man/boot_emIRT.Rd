@@ -21,11 +21,10 @@
   \item{Ntrials}{ Number of bootstrap trials to run. }
   \item{verbose}{ Number of trials before progress notification triggers. }
 }
-
 \value{
     An object of class \code{emIRT}.  The output takes the original emIRT.out object and appends the following:
   \item{bse}{ list, containing only the matrix:
-    \itemize{
+    \describe{
     \item{\code{x}}{  A (N x 1) matrix of bootstrapped standard errors}
     }                 
    }
@@ -42,8 +41,8 @@ Jonathan Olmsted \email{jpolmsted@gmail.com}
 
 \references{
 
-Kosuke Imai, James Lo, and Jonathan Olmsted ``Fast Estimation of Ideal Points with Massive Data.''
-Working Paper. Available at \url{http://imai.princeton.edu/research/fastideal.html}.
+Kosuke Imai, James Lo, and Jonathan Olmsted (2016). ``Fast Estimation of Ideal Points with Massive Data.''
+American Political Science Review, Vol. 110, No. 4 (December), pp. 631-656.
 
 }
 

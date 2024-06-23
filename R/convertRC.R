@@ -1,5 +1,5 @@
 convertRC <- function(.rc, type = "binIRT") {
-    if (class(.rc) != "rollcall") {
+    if (!("rollcall" %in% class(.rc))) {
         stop("Input must be a rollcall object.")
     }
                                         # output

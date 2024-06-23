@@ -14,16 +14,14 @@
 data(manifesto)
 }
 
-\value{
-
-  \item{manifesto}{ list, containing the following elements:
-    \itemize{
-    \item{\code{data.manif}}{ Term-document matrix, formatted for input to \code{ordIRT()}.}
-    \item{\code{starts.manif}}{ Start values, formatted for input to \code{ordIRT()}. }
-    \item{\code{priors.manif}}{ Priors, formatted for input to \code{ordIRT()}.}
-    }
+\format{list, containing the following elements:
+    \describe{
+    \item{data.manif}{ Term-document matrix, formatted for input to \code{ordIRT()}.}
+    \item{starts.manif}{ Start values, formatted for input to \code{ordIRT()}. }
+    \item{priors.manif}{ Priors, formatted for input to \code{ordIRT()}.}
   }
 }
+
 
 \references{
 
@@ -34,8 +32,8 @@ James Lo, Jonathan Slapin, and Sven-Oliver Proksch. 2016. ``Ideological Clarify 
 Competition: A New Measure and Test Using Election Manifestos.'' British Journal of Political
 Science, 1-20
 
-Kosuke Imai, James Lo, and Jonathan Olmsted. ``Fast Estimation of Ideal Points with Massive Data.''
-Working Paper available at \url{http://imai.princeton.edu/research/fastideal.html}.
+Kosuke Imai, James Lo, and Jonathan Olmsted. (2016). ``Fast Estimation of Ideal
+Points with Massive Data.'' American Political Science Review, Vol. 110, No. 4 (December), pp. 631-656.
 
 }
 

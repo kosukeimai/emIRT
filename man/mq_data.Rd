@@ -17,20 +17,15 @@
 
 }
 
-\usage{
-data(mq_data)
-}
+\usage{data(mq_data)}
 
-\value{
-
-  \item{mq_data}{ list, containing the following elements:
-    \itemize{
-    \item{\code{data.mq}}{ Justice voting data, formatted for input to \code{dynIRT()}.}
-    \item{\code{cur.mq}}{ Start values, formatted for input to \code{dynIRT()}. }
-    \item{\code{priors.mq}}{ Priors, formatted for input to \code{dynIRT()}.}
-    \item{\code{mq_mcmc}}{ Ideal point estimates with data via MCMC.}
-    \item{\code{justiceName}}{ A vector of names identifying the justice that goes with each estimated ideal point.}
-    }
+\format{list, containing the following elements:
+    \describe{
+    \item{data.mq}{ Justice voting data, formatted for input to \code{dynIRT()}.}
+    \item{cur.mq}{ Start values, formatted for input to \code{dynIRT()}. }
+    \item{priors.mq}{ Priors, formatted for input to \code{dynIRT()}.}
+    \item{mq_mcmc}{ Ideal point estimates with data via MCMC.}
+    \item{justiceName}{ A vector of names identifying the justice that goes with each estimated ideal point.}
   }
 }
 
@@ -38,7 +33,7 @@ data(mq_data)
 
 Original model and the example is based off of Andrew Martin and Kevin Quinn, ``Dynamic Ideal
 Point Estimation via Markov Chain Monte Carlo for the U.S. Supreme Court, 1953-1999.'' Political
-Analysis 10(2) 134-153.  Also see \url{https://mqscores.lsa.umich.edu/}.
+Analysis 10(2) 134-153.
 
 Variational model is described in Kosuke Imai, James Lo, and Jonathan Olmsted (2016). ``Fast Estimation
 of Ideal Points with Massive Data.'' American Political Science Review, Vol. 110, No. 4 (December), pp. 631-656.

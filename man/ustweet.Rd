@@ -9,18 +9,13 @@
   Data from U.S. Twitter follower data, obtained from Barbera's (2015) replication archive.
 }
 
-\usage{
-data(ustweet)
-}
+\usage{data(ustweet)}
 
-\value{
-
-  \item{ustweet}{ list, containing the following elements:
-    \itemize{
-    \item{\code{data}}{ Term-document matrix, formatted for input to \code{networkIRT()}.}
-    \item{\code{starts}}{ Start values, formatted for input to \code{networkIRT()}. }
-    \item{\code{priors}}{ Priors, formatted for input to \code{networkIRT()}.}
-    }
+\format{list, containing the following elements:
+    \describe{
+    \item{data}{ Term-document matrix, formatted for input to \code{networkIRT()}.}
+    \item{starts}{ Start values, formatted for input to \code{networkIRT()}. }
+    \item{priors}{ Priors, formatted for input to \code{networkIRT()}.}
   }
 }
 
@@ -29,8 +24,8 @@ data(ustweet)
 Pablo Barbera. 2015. ``Birds of the Same Feather Tweet Together: Bayesian Ideal Point Estimation
 Using Twitter Data.'' Political Analysis 23(1), 76-91
 
-Kosuke Imai, James Lo, and Jonathan Olmsted. ``Fast Estimation of Ideal Points with Massive Data.''
-Working Paper available at \url{http://imai.princeton.edu/research/fastideal.html}.
+Kosuke Imai, James Lo, and Jonathan Olmsted. (2016). ``Fast Estimation of Ideal Points with Massive Data.''
+American Political Science Review, Vol. 110, No. 4 (December), pp. 631-656.
 
 }
 

@@ -16,7 +16,7 @@
 
 \arguments{
   \item{.data}{ a list with the following items.
-      \itemize{
+      \describe{
       \item{\code{rc}}{  A (N x J) matrix of observed votes. `1' and `-1' are the yea and nay codes, while `0' is
       	a missing data code.}
       \item{\code{startlegis}}{  An (N x 1) matrix indicating the first session that each legislator serves. Justices
@@ -33,7 +33,7 @@
     }
   \item{.starts}{ a list containing several matrices of starting values for the parameters. The
      list should contain the following matrices:
-    \itemize{
+    \describe{
     \item{\code{alpha}}{  A (J x 1) matrix of starting values for the item difficulty parameter \eqn{\alpha_j}.}
     \item{\code{beta}}{  A (J x 1) matrix of starting values for the item discrimination parameter \eqn{\beta_j}.}
     \item{\code{x}}{  An (N x T) matrix of starting values for the respondent ideal points \eqn{x_{it}}, with rows indicating the
@@ -44,7 +44,7 @@
   }
   \item{.priors}{  list, containing several matrices of starting values for the parameters. The
      list should contain the following matrices:
-    \itemize{
+    \describe{
     \item{\code{x.mu0}}{  A (N x 1) prior means matrix for respondent ideal points \eqn{c_{i0}}. These are generally
       set to be somewhat informative to resolve the standard rotational invariance problem in ideal point models.}
     \item{\code{x.sigma0}}{  A (N x 1) prior variance matrix for respondent ideal points \eqn{C_{i0}}.}
@@ -54,7 +54,7 @@
      }
   }
   \item{.control}{  list, specifying some control functions for estimation.  Options include the following:
-    \itemize{
+    \describe{
     \item{\code{threads}}{  integer, indicating number of cores to use. Default is to use a single core, but more can be
     	supported if more speed is desired.}
     \item{\code{verbose}}{  boolean, indicating whether output during estimation should be verbose or not.  Set FALSE by default.}
@@ -71,7 +71,7 @@
 
   \item{means}{ list, containing several matrices of point estimates for the parameters corresponding
     to the inputs for the priors.  The list should contain the following matrices.
-    \itemize{
+    \describe{
     \item{\code{x}}{  A (N x T) matrix of point estimates for the respondent ideal points \eqn{x_{it}}, with rows
       indicating respondent and columns indicating session of the estimated ideal point. Estimates will equal
       exactly 0 for legislator/period combinations in which the legislator did not serve.}
@@ -84,7 +84,7 @@
     to the inputs for the priors.  Note that these variances are those recovered via variational approximation,
     and in most cases they are known to be far too small and generally unusable.  Better estimates of variances
     can be obtained manually via the parametric bootstrap.  The list should contain the following matrices:
-    \itemize{
+    \describe{
     \item{\code{x}}{  A (N x T) matrix of variance estimates for the respondent ideal points \eqn{x_{it}}, with rows
       indicating respondent and columns indicating session of the estimated ideal point. Estimates will equal
       exactly 0 for legislator/period combinations in which the legislator did not serve.}
@@ -94,7 +94,7 @@
    }
 
   \item{runtime}{ A list of fit results, with elements listed as follows:}
-    \itemize{
+    \describe{
     \item{\code{iters}}{  integer, number of iterations run.}
     \item{\code{conv}}{  integer, convergence flag. Will return 1 if threshold reached, and 0 if maximum number of iterations reached.}
     \item{\code{threads}}{  integer, number of threads used to estimated model.}

@@ -15,21 +15,16 @@
 
 }
 
-\usage{
-data(dwnom)
-}
+\usage{data(dwnom)}
 
-\value{
-
-  \item{dwnom}{ list, containing the following elements:
-    \itemize{
-    \item{\code{data.in}}{ Legislator voting data, formatted for input to \code{hierIRT()}.}
-    \item{\code{cur}}{ Start values, formatted for input to \code{hierIRT()}. }
-    \item{\code{priors}}{ Priors, formatted for input to \code{hierIRT()}.}
-    \item{\code{legis}}{ data frame, containing contextual information about the legislators estimated.}
-    \item{\code{nomres}}{ data frame, containing estimates from DW-NOMINATE on the same data. These
+\format{list, containing the following elements:
+    \describe{
+    \item{data.in}{ Legislator voting data, formatted for input to \code{hierIRT()}.}
+    \item{cur}{ Start values, formatted for input to \code{hierIRT()}. }
+    \item{priors}{ Priors, formatted for input to \code{hierIRT()}.}
+    \item{legis}{ data frame, containing contextual information about the legislators estimated.}
+    \item{nomres}{ data frame, containing estimates from DW-NOMINATE on the same data. These
       are read from the file SL80110C21.DAT. }
-    }
   }
 }
 

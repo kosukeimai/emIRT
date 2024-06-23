@@ -23,31 +23,25 @@
 
 }
 
-\usage{
-data(AsahiTodai)
-}
-
-\value{
-
-  \item{AsahiTodai}{ list, containing the following elements:
-    \itemize{
-    \item{\code{dat.all}}{ Survey data, formatted for input to \code{ordIRT()}.}
-    \item{\code{start.values}}{ Start values, formatted for input to \code{ordIRT()}. }
-    \item{\code{priors}}{ Priors, formatted for input to \code{ordIRT()}.}
-    \item{\code{ideal3}}{ Ideal point estimates with data via MCMC, using collapsed 3-category data.}
-    \item{\code{ideal5}}{ Ideal point estimates with data via MCMC, using original 5-category data.}
-    \item{\code{obs.attri}}{ Attribute data of the respondents.}
+\usage{data(AsahiTodai)}
+\format{list, containing the following variables:
+    \describe{
+    \item{dat.all}{ Survey data, formatted for input to \code{ordIRT()}.}
+    \item{start.values}{ Start values, formatted for input to \code{ordIRT()}. }
+    \item{priors}{ Priors, formatted for input to \code{ordIRT()}.}
+    \item{ideal3}{ Ideal point estimates with data via MCMC, using collapsed 3-category data.}
+    \item{ideal5}{ Ideal point estimates with data via MCMC, using original 5-category data.}
+    \item{obs.attri}{ Attribute data of the respondents.}
     }
-  }
 }
 
 \references{
 
 Shigeo Hirano, Kosuke Imai, Yuki Shiraito and Masaaki Taniguchi. 2011. ``Policy Positions in
-Mixed Member Electoral Systems:Evidence from Japan.'' Working Paper available at \url{http://imai.princeton.edu/research/japan.html}.
+Mixed Member Electoral Systems:Evidence from Japan.'' Working Paper.
 
-Kosuke Imai, James Lo, and Jonathan Olmsted. ``Fast Estimation of Ideal Points with Massive Data.''
-Working Paper available at \url{http://imai.princeton.edu/research/fastideal.html}.
+Kosuke Imai, James Lo, and Jonathan Olmsted (2016). ``Fast Estimation of Ideal Points with Massive Data.''
+American Political Science Review, Vol. 110, No. 4 (December), pp. 631-656. 
 
 }
 

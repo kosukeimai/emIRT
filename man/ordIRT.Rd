@@ -22,7 +22,7 @@
   \item{.starts}{ a list containing several matrices of starting values for the parameters. Note that
   the parameters here correspond to the re-parameterized version of the model (i.e. alpha is \eqn{alpha^*},
   not the original \eqn{alpha_{1j}}  The list should contain the following matrices:
-    \itemize{
+    \describe{
     \item{\code{beta}}{  A (J x 1) matrix of starting values for the reparameterized item discrimination parameter \eqn{\beta^*}.}
     \item{\code{x}}{  An (N x 1) matrix of starting values for the respondent ideal points \eqn{x_t}.}
     \item{\code{tau}}{  A (J x 1) matrix of starting values for the bill cutpoint \eqn{\tau_j}.}
@@ -32,7 +32,7 @@
   \item{.priors}{  list, containing several matrices of starting values for the parameters. Note that
   the parameters here correspond to the re-parameterized version of the model (i.e. alpha is \eqn{\alpha^*},
   not the original \eqn{\alpha_{1j}}  The list should contain the following matrices:
-    \itemize{
+    \describe{
     \item{\code{x$mu}}{  A (1 x 1) prior means matrix for respondent ideal points \eqn{x_t}.}
     \item{\code{x$sigma}}{  A (1 x 1) prior covariance matrix for respondent ideal points \eqn{x_t}.}
     \item{\code{beta$mu}}{  A (2 x 1) prior means matrix for \eqn{\tau_j} and \eqn{\beta^*}.}
@@ -41,7 +41,7 @@
   }
   \item{.D}{ integer, indicates number of dimensions. Only one dimension is implemented and this argument is ignored.}
   \item{.control}{list, specifying some control functions for estimation.  Options include the following:
-    \itemize{
+    \describe{
     \item{\code{threads}}{  integer, indicating number of cores to use. Default is to use a single core, but more can be
     	supported if more speed is desired.}
     \item{\code{verbose}}{  boolean, indicating whether output during estimation should be verbose or not.  Set FALSE by default.}
@@ -58,7 +58,7 @@
 
   \item{means}{ list, containing several matrices of point estimates for the parameters corresponding
     to the inputs for the priors.  The list should contain the following matrices.
-    \itemize{
+    \describe{
     \item{\code{x}}{  A (N x 1) matrix of point estimates for the respondent ideal points \eqn{x_t}.}
     \item{\code{beta}}{  A (J x 1) matrix of point estimates for the reparameterized item discrimination parameter \eqn{\beta^*}.}
     \item{\code{tau}}{  A (J x 1) matrix of point estimates for the bill cutpoint \eqn{\alpha^*}.}
@@ -71,7 +71,7 @@
     to the inputs for the priors.  Note that these variances are those recovered via variational approximation,
     and in most cases they are known to be far too small and generally unusable.  Better estimates of variances
     can be obtained manually via the parametric bootstrap.  The list should contain the following matrices:
-    \itemize{
+    \describe{
     \item{\code{x}}{  A (N x 1) matrix of variances for the respondent ideal points \eqn{x_t}.}
     \item{\code{beta}}{  A (J x 1) matrix of variances for the reparameterized item discrimination parameter \eqn{\beta^*}.}
     \item{\code{tau}}{  A (J x 1) matrix of variances for the bill cutpoint \eqn{\tau_j}.}
@@ -79,7 +79,7 @@
    }
 
   \item{runtime}{ A list of fit results, with elements listed as follows:}
-    \itemize{
+    \describe{
     \item{\code{iters}}{  integer, number of iterations run.}
     \item{\code{conv}}{  integer, convergence flag. Will return 1 if threshold reached, and 0 if maximum number of iterations reached.}
     \item{\code{threads}}{  integer, number of threads used to estimated model.}
@@ -92,7 +92,7 @@
 
 
 \author{ 
-Kosuke Imai \email{kimai@princeton.edu}
+Kosuke Imai \email{imai@Harvard.edu}
 
 James Lo \email{jameslo@princeton.edu}
 
@@ -101,8 +101,8 @@ Jonathan Olmsted \email{jpolmsted@gmail.com}
 
 \references{
 
-Kosuke Imai, James Lo, and Jonathan Olmsted ``Fast Estimation of Ideal Points with Massive Data.''
-Working Paper. Available at \url{http://imai.princeton.edu/research/fastideal.html}.
+Kosuke Imai, James Lo, and Jonathan Olmsted (2016). ``Fast Estimation of Ideal
+Points with Massive Data.'' American Political Science Review, Vol. 110, No. 4 (December), pp. 631-656.
 
 }
 

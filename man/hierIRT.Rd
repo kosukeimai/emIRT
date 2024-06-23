@@ -18,7 +18,7 @@
 
 \arguments{
   \item{.data}{ a list with the following items:
-      \itemize{
+      \describe{
       \item{\code{y}}{  A (L x 1) matrix of observed votes. `1' and `-1' are the yea and nay codes.}
       \item{\code{i}}{  A (L x 1) integer matrix of indexes of the ideal point i[l] linked to each observed
         vote l = 0 \eqn{\ldots} L.  Indexes begin at 0 and reach a maximum value of I - 1.}
@@ -34,7 +34,7 @@
     }
   \item{.starts}{ a list containing several matrices of starting values for the parameters. The list should
   	contain the following matrices:
-    \itemize{
+    \describe{
     \item{\code{alpha}}{  A (J x 1) matrix of starting values for the item difficulty parameter \eqn{\alpha_j}. }
     \item{\code{beta}}{  A (J x 1) matrix of starting values for the item discrimination parameter \eqn{\beta_j}. }
     \item{\code{gamma}}{  An (I x D) matrix of starting values for the group level coefficients \eqn{\gamma_{m}}. }
@@ -44,7 +44,7 @@
   }
   \item{.priors}{  list, containing several matrices of starting values for the parameters. The list should
     contain the following matrices:
-    \itemize{
+    \describe{
     \item{\code{gamma.mu}}{  A (D x 1) prior means matrix for all group level coefficients \eqn{\gamma_{m}}.}
     \item{\code{gamma.sigma}}{  A (D x D) prior covariance matrix for all group level coefficients \eqn{\gamma_{m}}.}
     \item{\code{beta.mu}}{  A (2 x 1) prior means matrix for all bill parameters \eqn{\alpha_j} and \eqn{\beta_j}.}
@@ -54,7 +54,7 @@
      }
   }
   \item{.control}{  list, specifying some control functions for estimation.  Options include the following:
-    \itemize{
+    \describe{
     \item{\code{threads}}{  integer, indicating number of cores to use. Default is to use a single core, but more can be
     	supported if more speed is desired.}
     \item{\code{verbose}}{  boolean, indicating whether output during estimation should be verbose or not.  Set FALSE by default.}
@@ -71,7 +71,7 @@
 
   \item{means}{ list, containing several matrices of point estimates for the parameters corresponding
     to the inputs for the priors.  The list should contain the following matrices.
-    \itemize{
+    \describe{
     \item{\code{alpha}}{  A (J x 1) matrix of point estimates for the item difficulty parameter \eqn{\alpha_j}. }
     \item{\code{beta}}{  A (J x 1) matrix of point estimates for the item discrimination parameter \eqn{\beta_j}. }
     \item{\code{gamma}}{  An (I x D) matrix of point estimates for the group level coefficients \eqn{\gamma_{m}}. }
@@ -84,7 +84,7 @@
   \item{vars}{ list, containing several matrices of variance estimates for several parameters of interest for diagnostic
     purposes. Note that these variances are those recovered via variational approximation, and in most cases they are
     known to be far too small and generally unusable. The list should contain the following matrices:
-    \itemize{
+    \describe{
     \item{\code{eta}}{  A (I x 1) matrix of variance estimates for the ideal point noise parameter \eqn{\eta_n}.}
     \item{\code{gamma}}{  A (G x D x D) cube of covariance estimates for the gamma parameters for each group.
       Each of the G items is a matrix with a single covariance matrix for the m-th group's D gamma parameters.}
@@ -94,7 +94,7 @@
    }
 
   \item{runtime}{ A list of fit results, with elements listed as follows:}
-    \itemize{
+    \describe{
     \item{\code{iters}}{  integer, number of iterations run.}
     \item{\code{conv}}{  integer, convergence flag. Will return 1 if threshold reached, and 0 if maximum number of iterations reached.}
     \item{\code{threads}}{  integer, number of threads used to estimated model.}
@@ -102,7 +102,7 @@
     }                 
 
   \item{N}{ A list of counts of various items:}
-    \itemize{
+    \describe{
     \item{\code{D}}{  integer, number of dimensions (i.e. number of covariates, including intercept).}
     \item{\code{G}}{  integer, number of groups.}
     \item{\code{I}}{  integer, number of ideal points.}
@@ -115,7 +115,7 @@
 
 
 \author{ 
-Kosuke Imai \email{kimai@princeton.edu}
+Kosuke Imai \email{imai@harvard.edu}
 
 James Lo \email{lojames@usc.edu}
 

@@ -17,7 +17,7 @@
 }
 
 \value{
-    \itemize{
+    \describe{
     \item{\code{x$mu}}{  A (D x D) prior means matrix for respondent ideal points \eqn{x_i}.}
     \item{\code{x$sigma}}{  A (D x D) prior covariance matrix for respondent ideal points \eqn{x_i}.}
     \item{\code{beta$mu}}{  A ( D+1 x 1) prior means matrix for \eqn{\alpha_j} and \eqn{\beta_j}.}
@@ -26,7 +26,7 @@
 }
 
 \author{ 
-Kosuke Imai \email{kimai@princeton.edu}
+Kosuke Imai \email{imai@harvard.edu}
 
 James Lo \email{jameslo@princeton.edu}
 
@@ -35,8 +35,8 @@ Jonathan Olmsted \email{jpolmsted@gmail.com}
 
 \references{
 
-Kosuke Imai, James Lo, and Jonathan Olmsted ``Fast Estimation of Ideal Points with Massive Data.''
-Working Paper. Available at \url{http://imai.princeton.edu/research/fastideal.html}.
+Kosuke Imai, James Lo, and Jonathan Olmsted. (2016).  ``Fast Estimation of Ideal Points with Massive Data.''
+Working Paper. American Political Science Review, Vol. 110, No. 4 (December), pp. 631-656.
 
 }
 

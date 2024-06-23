@@ -24,7 +24,7 @@
      is assigned its own ideal point, and we get the Slapin and Proksch Wordfish model.}
   \item{.starts}{ a list containing several matrices of starting values for the parameters. 
       The list should contain the following matrices:
-    \itemize{
+    \describe{
     \item{\code{alpha}}{  A (J x 1) matrix of starting values for the word frequency parameter \eqn{alpha}.}
     \item{\code{psi}}{  A (K x 1) matrix of starting values for the document verbosity parameter \eqn{psi}.}
     \item{\code{beta}}{  A (J x 1) matrix of starting values for the word discrimination parameter \eqn{\beta}.}
@@ -33,7 +33,7 @@
   }
   \item{.priors}{  list, containing several matrices of starting values for the parameters.
      The list should contain the following matrices:
-    \itemize{
+    \describe{
     \item{\code{x$mu}}{  numeric, prior mean for actor ideal points \eqn{x_i}.}
     \item{\code{x$sigma2}}{   numeric, prior variance for actor ideal points \eqn{x_i}.}
     \item{\code{beta$mu}}{  numeric, prior mean for \eqn{\beta_j}.}
@@ -46,7 +46,7 @@
      }
   }
   \item{.control}{list, specifying some control functions for estimation.  Options include the following:
-    \itemize{
+    \describe{
     \item{\code{threads}}{  integer, indicating number of cores to use. Default is to use a single core, but more can be
     	supported if more speed is desired.}
     \item{\code{verbose}}{  boolean, indicating whether output during estimation should be verbose or not.  Set FALSE by default.}
@@ -63,7 +63,7 @@
 
   \item{means}{ list, containing several matrices of point estimates for the parameters corresponding
     to the inputs for the priors.  The list should contain the following matrices.
-    \itemize{
+    \describe{
     \item{\code{alpha}}{  A (J x 1) matrix of point estimates for the word frequency parameter \eqn{alpha}.}
     \item{\code{psi}}{  A (K x 1) matrix of point estimates for the document verbosity parameter \eqn{psi}.}
     \item{\code{beta}}{  A (J x 1) matrix of point estimates for the word discrimination parameter \eqn{\beta}.}
@@ -75,14 +75,14 @@
     to the inputs for the priors.  Note that these variances are those recovered via variational approximation,
     and in most cases they are known to be far too small and generally unusable.  Better estimates of variances
     can be obtained manually via the parametric bootstrap.  The list should contain the following matrices:
-    \itemize{
+    \describe{
     \item{\code{beta}}{  A (J x 1) matrix of variational variance estimates for the word discrimination parameter \eqn{\beta}.}
     \item{\code{x}}{  An (NI x 1) matrix of variational variance estimates for the actor ideal points \eqn{x_i}.}
     }                 
    }
 
   \item{runtime}{ A list of fit results, with elements listed as follows:
-    \itemize{
+    \describe{
     \item{\code{iters}}{  integer, number of iterations run.}
     \item{\code{conv}}{  integer, convergence flag. Will return 1 if threshold reached, and 0 if maximum number of iterations reached.}
     \item{\code{threads}}{  integer, number of threads used to estimated model.}
@@ -91,7 +91,7 @@
   }
 
   \item{N}{ A list of sizes, with elements listed as follow:
-    \itemize{
+    \describe{
      \item{K}{ Number of unique words in term-document matrix.}
      \item{J}{ Number of documents in term-document matrix.}
      \item{I}{ Number of actors in model, always less than or equal to J.}
@@ -104,7 +104,7 @@
 
 
 \author{ 
-Kosuke Imai \email{kimai@princeton.edu}
+Kosuke Imai \email{imai@harvard.edu}
 
 James Lo \email{jameslo@princeton.edu}
 
@@ -113,8 +113,8 @@ Jonathan Olmsted \email{jpolmsted@gmail.com}
 
 \references{
 
-Kosuke Imai, James Lo, and Jonathan Olmsted ``Fast Estimation of Ideal Points with Massive Data.''
-Working Paper. Available at \url{http://imai.princeton.edu/research/fastideal.html}.
+Kosuke Imai, James Lo, and Jonathan Olmsted (2016). ``Fast Estimation of Ideal
+Points with Massive Data.'' American Political Science Review, Vol. 110, No. 4 (December), pp. 631-656.
 
 }
 
