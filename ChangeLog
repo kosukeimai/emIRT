@@ -20,5 +20,7 @@
 	* commented part of ordIRT() example, as it crashes on Solaris (and only on Solaris)
  	* Switched useDynLib(emIRT) to useDynLib(emIRT, .registration=TRUE) for R_registerRoutines and R_useDynamicSymbols, added init.c
 
-0.0.11   * binIRT() now sets asEM=TRUE by default
+0.0.11  * binIRT() now sets asEM=TRUE by default
 	* getEx() line overwriting 'A' changed to fix problem identified by Larry Rothenberg, Jinhee Jo, and Kyoungwon Seo. This issue would lead to some situations where the posterior likelihood would not improve at each iteration
+
+0.0.12  * documentation error fixed
