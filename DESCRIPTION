@@ -2,7 +2,7 @@ Package: emIRT
 Type: Package
 Title: EM Algorithms for Estimating Item Response Theory Models
 Version: 0.0.14
-Date: 2024-06-23
+Date: 2024-07-05
 Author: Kosuke Imai <imai@harvard.edu>, James Lo <jameslo989@gmail.com>, Jonathan Olmsted <jpolmsted@gmail.com>
 Maintainer: Kosuke Imai <imai@harvard.edu>
 Description: Various Expectation-Maximization (EM) algorithms are implemented for item 
